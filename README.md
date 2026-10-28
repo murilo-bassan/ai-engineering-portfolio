@@ -10,7 +10,7 @@ needed** — with deterministic model stand-ins; any OpenAI-compatible endpoint 
 
 <img src="assets/site-hero.png" alt="portfolio site" width="100%">
 
-[English](#projects) · [Português](#português)
+**English** · [Português](README.pt-BR.md)
 
 </div>
 
@@ -20,7 +20,7 @@ needed** — with deterministic model stand-ins; any OpenAI-compatible endpoint 
 
 | # | Project | The production question it answers | Proof |
 |---|---|---|---|
-| 01 | **[toolgate](https://github.com/murilo-bassan/mcp-tool-gateway)** · `mcp-tool-gateway` | Who may call which tool, with which data — and can you prove it? | MCP server with per-tool RBAC, Fernet secrets, four-eyes dynamic tools, SSRF guards, hash-chained audit · 81 tests |
+| 01 | **[toolgate](https://github.com/murilo-bassan/mcp-tool-gateway)** · `mcp-tool-gateway` | Who may call which tool, with which data — and can you prove it? | MCP server with per-tool RBAC, Fernet secrets, four-eyes dynamic tools, SSRF guards, hash-chained audit, chat with stored conversations · 102 tests |
 | 02 | **[runloop](https://github.com/murilo-bassan/durable-agent-runtime)** · `durable-agent-runtime` | What happens when the worker dies mid-run, the user clicks twice, the budget runs out? | Postgres `SKIP LOCKED` queue, resumable transcripts, exactly-once effects, token reservations, argument-bound approvals · chaos drill: **24/24 runs after SIGKILL, 0 duplicates** |
 | 03 | **[processlens](https://github.com/murilo-bassan/process-automation-agents)** · `process-automation-agents` | What should we automate in this process — and where does it say so? | LangGraph over BPMN + docs; every claim verified against evidence; rubric scoring; structured output with self-repair; DOCX reports · 34 tests |
 | 04 | **[priceintel](https://github.com/murilo-bassan/hybrid-rag-price-intel)** · `hybrid-rag-price-intel` | How much did the public sector actually pay for this? | BM25 + pgvector + RRF, LLM judge with adaptive depth, unit normalization, robust stats, Next.js 15 · **worst-case error 968% → 14%**, CI quality gate |
@@ -63,22 +63,7 @@ flowchart LR
 5. **Reproducible by default** — synthetic data from fixed seeds, offline stand-ins, no keys to run.
 6. **Decisions are written down** — 17 ADRs across the repos, including what was left out and why.
 
----
-
-## Português
-
-**Eu construo a parte dos sistemas de IA que precisa funcionar na segunda-feira.**
-
-Cinco repositórios com um mesmo padrão de engenharia:
-- **toolgate**: governança de tools MCP, com permissão por tool, secrets, aprovação a quatro olhos e auditoria encadeada.
-- **runloop**: agentes que sobrevivem a falhas, com fila no Postgres, efeitos executados uma única vez, orçamento de tokens e aprovação humana.
-- **processlens**: análise de processos BPMN em que toda afirmação do modelo é checada contra evidência e a nota sai de uma rubrica.
-- **priceintel**: RAG híbrido com juiz e estatística robusta; o pior erro de preço cai de 968% para 14%, medido contra gabarito oculto.
-- **routebench**: avaliação honesta de roteadores, com McNemar, intervalos de confiança, calibração e cascatas.
-
-Tudo roda offline, sem nenhuma chave de API, e todos os dados são sintéticos.
-
-O site deste repositório (`index.html`) é publicado via GitHub Pages e tem versão em inglês e em português.
+Every repository has a README in English and in Portuguese, and every UI switches between EN and PT-BR.
 
 ---
 
