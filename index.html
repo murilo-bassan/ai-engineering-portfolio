@@ -46,7 +46,7 @@
     <div class="stats">
       <div class="stat"><span class="label" data-lang-en>repositories</span><span class="label" data-lang-pt>repositórios</span><b>5</b></div>
       <div class="stat"><span class="label" data-lang-en>automated tests</span><span class="label" data-lang-pt>testes automatizados</span><b>210+</b></div>
-      <div class="stat"><span class="label" data-lang-en>API keys needed to run</span><span class="label" data-lang-pt>chaves de API para rodar</span><b class="accent">0</b></div>
+      <div class="stat"><span class="label" data-lang-en>duplicate orders after killing a worker</span><span class="label" data-lang-pt>pedidos duplicados após matar um worker</span><b class="accent">0</b></div>
       <div class="stat"><span class="label" data-lang-en>architecture decisions</span><span class="label" data-lang-pt>decisões de arquitetura</span><b>17 ADRs</b></div>
     </div>
   </div>
@@ -60,8 +60,8 @@
         <h2 data-lang-en>Each one answers a question production asks.</h2>
         <h2 data-lang-pt>Cada um responde a uma pergunta que a produção faz.</h2>
       </div>
-      <p data-lang-en>Everything runs offline with deterministic stand-ins for the model, so every test and demo is reproducible. Plug any OpenAI-compatible endpoint in through the environment.</p>
-      <p data-lang-pt>Tudo roda offline com substitutos determinísticos do modelo, então todo teste e demo é reproduzível. Qualquer endpoint compatível com OpenAI entra pelo ambiente.</p>
+      <p data-lang-en>Model-agnostic by design: every project talks to any OpenAI-compatible provider (OpenAI, OpenRouter, vLLM, Ollama), and a deterministic reference engine behind the same interface keeps tests and CI exact.</p>
+      <p data-lang-pt>Agnóstico de modelo por design: todo projeto fala com qualquer provedor compatível com OpenAI (OpenAI, OpenRouter, vLLM, Ollama), e um motor de referência determinístico atrás da mesma interface mantém testes e CI exatos.</p>
     </div>
 
     <article class="project">
@@ -227,7 +227,7 @@
         </g>
         <g font-size="10.5" fill="#7a7a76">
           <text x="350" y="124">routes</text><text x="452" y="160">tool calls</text><text x="735" y="128">agent tools</text><text x="735" y="226">agent tools</text>
-          <text x="20" y="310" fill="#4a4a48">every arrow: one executor · one audit trail · offline-testable with deterministic model stand-ins</text>
+          <text x="20" y="310" fill="#4a4a48">every arrow: one executor · one audit trail · any OpenAI-compatible model · CI-reproducible</text>
         </g>
       </svg>
     </div>
@@ -289,8 +289,8 @@
         <p data-lang-pt>Toda chamada pelo mesmo executor; toda ação numa trilha à prova de adulteração.</p></div>
       <div class="principle"><span class="label">05</span>
         <h4 data-lang-en>Reproducible by default</h4><h4 data-lang-pt>Reproduzível por padrão</h4>
-        <p data-lang-en>Synthetic data from fixed seeds, offline model stand-ins, zero keys to run anything.</p>
-        <p data-lang-pt>Dados sintéticos com semente fixa, substitutos offline do modelo, nenhuma chave para rodar.</p></div>
+        <p data-lang-en>Synthetic data from fixed seeds and a deterministic reference engine behind every model call, so CI results are exact.</p>
+        <p data-lang-pt>Dados sintéticos com semente fixa e um motor de referência determinístico atrás de cada chamada de modelo, então os resultados do CI são exatos.</p></div>
       <div class="principle"><span class="label">06</span>
         <h4 data-lang-en>Decisions are written down</h4><h4 data-lang-pt>Decisões ficam escritas</h4>
         <p data-lang-en>ADRs explain the trade-off, including what was left out of scope and why.</p>

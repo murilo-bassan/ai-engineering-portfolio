@@ -5,8 +5,8 @@
 **I build the parts of AI systems that have to work on Monday.**
 
 Five repositories, one engineering standard: governed tools, durable agents, evidence-bound
-pipelines, measured retrieval and honest evaluation. Everything runs offline — **zero API keys
-needed** — with deterministic model stand-ins; any OpenAI-compatible endpoint plugs in through the environment.
+pipelines, measured retrieval and honest evaluation. **Model-agnostic**: any
+OpenAI-compatible provider plugs in through the environment, and a deterministic reference engine behind the same interface keeps tests and CI exact.
 
 <img src="assets/site-hero.png" alt="portfolio site" width="100%">
 
@@ -60,7 +60,7 @@ flowchart LR
 2. **Measure, don't eyeball** — ground truth, ablations, confidence intervals, CI gates; unflattering results stay in.
 3. **Design for the crash** — at-least-once with idempotent effects, ownership checks on every write.
 4. **One door, one trail** — every call through one executor, every action in a tamper-evident log.
-5. **Reproducible by default** — synthetic data from fixed seeds, offline stand-ins, no keys to run.
+5. **Reproducible by default** — synthetic data from fixed seeds and a deterministic reference engine behind every model call, so CI results are exact.
 6. **Decisions are written down** — 17 ADRs across the repos, including what was left out and why.
 
 Every repository has a README in English and in Portuguese, and every UI switches between EN and PT-BR.

@@ -5,8 +5,8 @@
 **Eu construo a parte dos sistemas de IA que precisa funcionar na segunda-feira.**
 
 Cinco repositórios, um mesmo padrão de engenharia: tools governadas, agentes duráveis, pipelines
-presos a evidências, busca medida e avaliação honesta. Tudo roda offline, **sem nenhuma chave de
-API**, com substitutos determinísticos dos modelos; qualquer endpoint compatível com OpenAI entra pelo ambiente.
+presos a evidências, busca medida e avaliação honesta. **Agnóstico de modelo**:
+qualquer provedor compatível com OpenAI entra pelo ambiente, e um motor de referência determinístico atrás da mesma interface mantém testes e CI exatos.
 
 <img src="assets/site-hero.png" alt="site do portfólio" width="100%">
 
@@ -60,7 +60,7 @@ flowchart LR
 2. **Medir, não olhar no olho**: gabarito, ablações, intervalos de confiança, portões no CI; resultados desfavoráveis ficam.
 3. **Projetar para a queda**: pelo menos uma vez com efeitos idempotentes, checagem de dono em toda escrita.
 4. **Uma porta, uma trilha**: toda chamada passa por um executor só, toda ação vai para um log à prova de adulteração.
-5. **Reproduzível por padrão**: dados sintéticos com sementes fixas, substitutos offline, nenhuma chave para rodar.
+5. **Reproduzível por padrão**: dados sintéticos com sementes fixas e um motor de referência determinístico atrás de cada chamada de modelo, então os resultados do CI são exatos.
 6. **Decisões ficam escritas**: 17 ADRs nos repositórios, inclusive o que ficou de fora e por quê.
 
 Todos os repositórios têm README em inglês e em português, e as interfaces têm opção PT-BR/EN.
