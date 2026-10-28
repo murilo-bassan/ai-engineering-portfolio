@@ -118,3 +118,4 @@ html[lang="pt-BR"] [data-lang-pt] { display: revert; }
   .links a.hide-sm { display: none; }
   .hero { padding: 64px 0 48px; }
 }
+.shot a { display: block; cursor: zoom-in; }
