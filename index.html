@@ -28,10 +28,11 @@
 
 <header class="hero" id="top">
   <div class="wrap">
-    <h1>Murilo<br>Bassan</h1>
     <div class="intro">
-      <p data-lang-en>I'm an AI researcher at LIA (UFMS) in Campo Grande, Brazil. I build AI agents and the software around them with Python, LangGraph and FastAPI.</p>
-      <p data-lang-pt>Sou pesquisador de IA no LIA (UFMS), em Campo Grande. Construo agentes de IA e o software em volta deles com Python, LangGraph e FastAPI.</p>
+      <h1 data-lang-en>I build AI agents and the software that keeps them reliable.</h1>
+      <h1 data-lang-pt>Construo agentes de IA e o software que os mantém confiáveis.</h1>
+      <p data-lang-en>I'm Murilo, an AI researcher at LIA (UFMS) in Campo Grande, Brazil, working with Python, LangGraph and FastAPI.</p>
+      <p data-lang-pt>Sou o Murilo, pesquisador de IA no LIA (UFMS), em Campo Grande, e trabalho com Python, LangGraph e FastAPI.</p>
       <p class="soft" data-lang-en>These five projects cover what it takes to use AI in real work: controlling access, surviving failures, checking answers and keeping costs down.</p>
       <p class="soft" data-lang-pt>Estes cinco projetos tratam do que é preciso para usar IA no trabalho de verdade: controlar acesso, aguentar falhas, conferir respostas e segurar o custo.</p>
       <div class="cta">
@@ -43,131 +44,166 @@
   </div>
 </header>
 
-<main id="projects">
-  <article class="project">
-    <div class="wrap grid">
-      <div class="text">
-        <h2>toolgate</h2>
-        <p class="what" data-lang-en>A control panel for the tools an AI assistant can use. You decide who can use each tool, passwords stay encrypted, and every call is logged so you can check later who did what.</p>
-        <p class="what" data-lang-pt>Um painel de controle para as ferramentas que um assistente de IA pode usar. Você decide quem usa cada ferramenta, as senhas ficam criptografadas e toda chamada fica registrada para conferir depois quem fez o quê.</p>
-        <ul data-lang-en>
+<main class="explorer" id="projects">
+  <div class="wrap">
+    <h2 class="section-title"><span data-lang-en>Projects</span><span data-lang-pt>Projetos</span></h2>
+    <div class="layout">
+      <div class="tabs" role="tablist" aria-label="Projects">
+      <button type="button" role="tab" id="t-toolgate" aria-controls="p-toolgate" aria-selected="true" tabindex="0">
+        <span class="t-name">toolgate</span>
+        <span class="t-line" data-lang-en>Permissions and audit for AI tools</span><span class="t-line" data-lang-pt>Permissões e auditoria para ferramentas de IA</span>
+      </button>
+      <button type="button" role="tab" id="t-runloop" aria-controls="p-runloop" aria-selected="false" tabindex="-1">
+        <span class="t-name">runloop</span>
+        <span class="t-line" data-lang-en>Agents that survive crashes</span><span class="t-line" data-lang-pt>Agentes que aguentam quedas</span>
+      </button>
+      <button type="button" role="tab" id="t-processlens" aria-controls="p-processlens" aria-selected="false" tabindex="-1">
+        <span class="t-name">processlens</span>
+        <span class="t-line" data-lang-en>Finds what to automate in a process</span><span class="t-line" data-lang-pt>Acha o que automatizar num processo</span>
+      </button>
+      <button type="button" role="tab" id="t-priceintel" aria-controls="p-priceintel" aria-selected="false" tabindex="-1">
+        <span class="t-name">priceintel</span>
+        <span class="t-line" data-lang-en>Price search over public purchases</span><span class="t-line" data-lang-pt>Busca de preços em compras públicas</span>
+      </button>
+      <button type="button" role="tab" id="t-routebench" aria-controls="p-routebench" aria-selected="false" tabindex="-1">
+        <span class="t-name">routebench</span>
+        <span class="t-line" data-lang-en>Is the LLM worth what it costs?</span><span class="t-line" data-lang-pt>O LLM vale o que custa?</span>
+      </button>
+      </div>
+      <div class="panels">
+    <section class="panel" role="tabpanel" id="p-toolgate" aria-labelledby="t-toolgate" tabindex="0">
+      <div class="body">
+        <div>
+          <h3>toolgate</h3>
+          <p class="what" data-lang-en>A control panel for the tools an AI assistant can use. You decide who can use each tool, passwords stay encrypted, and every call is logged so you can check later who did what.</p>
+          <p class="what" data-lang-pt>Um painel de controle para as ferramentas que um assistente de IA pode usar. Você decide quem usa cada ferramenta, as senhas ficam criptografadas e toda chamada fica registrada para conferir depois quem fez o quê.</p>
+        </div>
+        <div>
+          <ul data-lang-en>
           <li>Chat with the tools in plain language; conversations are saved</li>
           <li>A new tool only goes live after another person approves it</li>
           <li>The log notices if anyone edits an old record</li>
           <li>Works with Claude Desktop and any MCP client</li>
-        </ul>
-        <ul data-lang-pt>
+          </ul>
+          <ul data-lang-pt>
           <li>Converse com as ferramentas em linguagem natural; as conversas ficam salvas</li>
           <li>Ferramenta nova só entra no ar depois que outra pessoa aprova</li>
           <li>O registro percebe se alguém mexer num evento antigo</li>
           <li>Funciona com o Claude Desktop e qualquer cliente MCP</li>
-        </ul>
-        <p class="stack">Python, FastAPI, MCP, SQLite, Docker</p>
-        <a class="code" href="https://github.com/murilo-bassan/mcp-tool-gateway" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+          </ul>
+          <p class="stack">Python, FastAPI, MCP, SQLite, Docker</p>
+          <a class="code" href="https://github.com/murilo-bassan/mcp-tool-gateway" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+        </div>
       </div>
       <a class="shot" href="assets/gateway.png" target="_blank" rel="noreferrer"><img src="assets/gateway.png" alt="toolgate dashboard" loading="lazy"></a>
-    </div>
-  </article>
-
-  <article class="project">
-    <div class="wrap grid">
-      <div class="text">
-        <h2>runloop</h2>
-        <p class="what" data-lang-en>Runs AI agents on long tasks without losing work. If the server goes down halfway, the agent continues where it stopped and nothing is done twice.</p>
-        <p class="what" data-lang-pt>Roda agentes de IA em tarefas longas sem perder trabalho. Se o servidor cair no meio, o agente continua de onde parou e nada é feito duas vezes.</p>
-        <ul data-lang-en>
+    </section>
+    <section class="panel" role="tabpanel" id="p-runloop" aria-labelledby="t-runloop" tabindex="0" hidden>
+      <div class="body">
+        <div>
+          <h3>runloop</h3>
+          <p class="what" data-lang-en>Runs AI agents on long tasks without losing work. If the server goes down halfway, the agent continues where it stopped and nothing is done twice.</p>
+          <p class="what" data-lang-pt>Roda agentes de IA em tarefas longas sem perder trabalho. Se o servidor cair no meio, o agente continua de onde parou e nada é feito duas vezes.</p>
+        </div>
+        <div>
+          <ul data-lang-en>
           <li>Asks a person before actions like placing an order</li>
           <li>Token limit per user, so costs can't run away</li>
           <li>Shows each step of the agent live</li>
           <li>Tested by killing a worker mid-run: 24 of 24 tasks finished, no duplicate orders</li>
-        </ul>
-        <ul data-lang-pt>
+          </ul>
+          <ul data-lang-pt>
           <li>Pede aprovação de uma pessoa antes de ações como fazer um pedido</li>
           <li>Limite de tokens por usuário, para o custo não sair do controle</li>
           <li>Mostra cada passo do agente ao vivo</li>
           <li>Testado derrubando um worker no meio: 24 de 24 tarefas concluídas, nenhum pedido duplicado</li>
-        </ul>
-        <p class="stack">Python, PostgreSQL, FastAPI, Docker</p>
-        <a class="code" href="https://github.com/murilo-bassan/durable-agent-runtime" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+          </ul>
+          <p class="stack">Python, PostgreSQL, FastAPI, Docker</p>
+          <a class="code" href="https://github.com/murilo-bassan/durable-agent-runtime" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+        </div>
       </div>
       <a class="shot" href="assets/runtime.png" target="_blank" rel="noreferrer"><img src="assets/runtime.png" alt="runloop console" loading="lazy"></a>
-    </div>
-  </article>
-
-  <article class="project">
-    <div class="wrap grid">
-      <div class="text">
-        <h2>processlens</h2>
-        <p class="what" data-lang-en>Reads a business process (a BPMN diagram plus its written description) and suggests what could be automated. Each suggestion points to the part of the document that backs it up.</p>
-        <p class="what" data-lang-pt>Lê um processo de negócio (o diagrama BPMN e a descrição escrita) e sugere o que dá para automatizar. Cada sugestão aponta o trecho do documento que a justifica.</p>
-        <ul data-lang-en>
+    </section>
+    <section class="panel" role="tabpanel" id="p-processlens" aria-labelledby="t-processlens" tabindex="0" hidden>
+      <div class="body">
+        <div>
+          <h3>processlens</h3>
+          <p class="what" data-lang-en>Reads a business process (a BPMN diagram plus its written description) and suggests what could be automated. Each suggestion points to the part of the document that backs it up.</p>
+          <p class="what" data-lang-pt>Lê um processo de negócio (o diagrama BPMN e a descrição escrita) e sugere o que dá para automatizar. Cada sugestão aponta o trecho do documento que a justifica.</p>
+        </div>
+        <div>
+          <ul data-lang-en>
           <li>Suggestions with no source in the documents are thrown out</li>
           <li>Scores come from a fixed checklist, so the same answers always give the same score</li>
           <li>Exports the report to Word, HTML or JSON</li>
           <li>Built as a LangGraph pipeline, one step per job</li>
-        </ul>
-        <ul data-lang-pt>
+          </ul>
+          <ul data-lang-pt>
           <li>Sugestão sem fonte nos documentos é descartada</li>
           <li>A nota vem de um checklist fixo: mesmas respostas, mesma nota</li>
           <li>Exporta o relatório em Word, HTML ou JSON</li>
           <li>Feito como um pipeline LangGraph, uma etapa para cada tarefa</li>
-        </ul>
-        <p class="stack">Python, LangGraph, Pydantic, FastAPI</p>
-        <a class="code" href="https://github.com/murilo-bassan/process-automation-agents" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+          </ul>
+          <p class="stack">Python, LangGraph, Pydantic, FastAPI</p>
+          <a class="code" href="https://github.com/murilo-bassan/process-automation-agents" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+        </div>
       </div>
       <a class="shot" href="assets/processlens.png" target="_blank" rel="noreferrer"><img src="assets/processlens.png" alt="processlens report" loading="lazy"></a>
-    </div>
-  </article>
-
-  <article class="project">
-    <div class="wrap grid">
-      <div class="text">
-        <h2>priceintel</h2>
-        <p class="what" data-lang-en>Answers "how much did the government pay for this?" by searching purchase records. It skips items that only look similar, turns boxes and packs into unit prices, and drops values typed in wrong.</p>
-        <p class="what" data-lang-pt>Responde "quanto o governo pagou por isto?" buscando em registros de compras. Ignora itens só parecidos, converte caixas e pacotes em preço por unidade e descarta valores digitados errado.</p>
-        <ul data-lang-en>
+    </section>
+    <section class="panel" role="tabpanel" id="p-priceintel" aria-labelledby="t-priceintel" tabindex="0" hidden>
+      <div class="body">
+        <div>
+          <h3>priceintel</h3>
+          <p class="what" data-lang-en>Answers "how much did the government pay for this?" by searching purchase records. It skips items that only look similar, turns boxes and packs into unit prices, and drops values typed in wrong.</p>
+          <p class="what" data-lang-pt>Responde "quanto o governo pagou por isto?" buscando em registros de compras. Ignora itens só parecidos, converte caixas e pacotes em preço por unidade e descarta valores digitados errado.</p>
+        </div>
+        <div>
+          <ul data-lang-en>
           <li>Searching "computer" no longer returns computer desks</li>
           <li>Every number in the answer links to the purchases behind it</li>
           <li>Turn each step off and watch the estimate get worse</li>
           <li>Worst error went from 968% to 14% on the test set</li>
-        </ul>
-        <ul data-lang-pt>
+          </ul>
+          <ul data-lang-pt>
           <li>Buscar "computador" não traz mais mesa para computador</li>
           <li>Cada número da resposta leva às compras de onde saiu</li>
           <li>Desligue cada etapa e veja a estimativa piorar</li>
           <li>O pior erro caiu de 968% para 14% no conjunto de teste</li>
-        </ul>
-        <p class="stack">Python, Next.js, TypeScript, pgvector</p>
-        <a class="code" href="https://github.com/murilo-bassan/hybrid-rag-price-intel" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+          </ul>
+          <p class="stack">Python, Next.js, TypeScript, pgvector</p>
+          <a class="code" href="https://github.com/murilo-bassan/hybrid-rag-price-intel" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+        </div>
       </div>
       <a class="shot" href="assets/priceintel.png" target="_blank" rel="noreferrer"><img src="assets/priceintel.png" alt="priceintel search" loading="lazy"></a>
-    </div>
-  </article>
-
-  <article class="project">
-    <div class="wrap grid">
-      <div class="text">
-        <h2>routebench</h2>
-        <p class="what" data-lang-en>Compares ways to decide which tool should handle a request, from a simple keyword list to an LLM, and shows which one is worth what it costs.</p>
-        <p class="what" data-lang-pt>Compara formas de decidir qual ferramenta deve atender um pedido, de uma lista de palavras-chave até um LLM, e mostra qual vale o que custa.</p>
-        <ul data-lang-en>
+    </section>
+    <section class="panel" role="tabpanel" id="p-routebench" aria-labelledby="t-routebench" tabindex="0" hidden>
+      <div class="body">
+        <div>
+          <h3>routebench</h3>
+          <p class="what" data-lang-en>Compares ways to decide which tool should handle a request, from a simple keyword list to an LLM, and shows which one is worth what it costs.</p>
+          <p class="what" data-lang-pt>Compara formas de decidir qual ferramenta deve atender um pedido, de uma lista de palavras-chave até um LLM, e mostra qual vale o que custa.</p>
+        </div>
+        <div>
+          <ul data-lang-en>
           <li>Counts how often each method acts on requests it should refuse</li>
           <li>Tells you when a difference is just noise</li>
           <li>Uses the expensive method only when the cheap one isn't sure</li>
           <li>Generates an HTML report you can open in any browser</li>
-        </ul>
-        <ul data-lang-pt>
+          </ul>
+          <ul data-lang-pt>
           <li>Conta quantas vezes cada método age num pedido que deveria recusar</li>
           <li>Avisa quando uma diferença é só ruído</li>
           <li>Usa o método caro só quando o barato não tem certeza</li>
           <li>Gera um relatório HTML que abre em qualquer navegador</li>
-        </ul>
-        <p class="stack">Python, NumPy, estatística</p>
-        <a class="code" href="https://github.com/murilo-bassan/llm-routing-eval-lab" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+          </ul>
+          <p class="stack">Python, NumPy, estatística</p>
+          <a class="code" href="https://github.com/murilo-bassan/llm-routing-eval-lab" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+        </div>
       </div>
       <a class="shot" href="assets/routebench.png" target="_blank" rel="noreferrer"><img src="assets/routebench.png" alt="routebench report" loading="lazy"></a>
+    </section>
+      </div>
     </div>
-  </article>
+  </div>
 </main>
 
 <section class="about" id="about">
@@ -207,6 +243,33 @@
     const browserPt = (navigator.language || "").toLowerCase().startsWith("pt");
     set(saved || (browserPt ? "pt-BR" : "en"));
     buttons.forEach((b) => b.addEventListener("click", () => set(b.dataset.setLang)));
+  })();
+
+  // Project tabs: click or arrow keys switch; #name in the URL opens that project.
+  (function () {
+    const tabs = Array.from(document.querySelectorAll("[role=tab]"));
+    function select(tab, focus) {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute("aria-selected", String(on));
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+      });
+      if (focus) tab.focus();
+      tab.scrollIntoView({ block: "nearest", inline: "nearest" });
+      history.replaceState(null, "", "#" + tab.id.slice(2));
+    }
+    tabs.forEach((t, i) => {
+      t.addEventListener("click", () => select(t));
+      t.addEventListener("keydown", (e) => {
+        const step = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+        if (!step) return;
+        e.preventDefault();
+        select(tabs[(i + step + tabs.length) % tabs.length], true);
+      });
+    });
+    const fromHash = document.getElementById("t-" + location.hash.slice(1));
+    if (fromHash) { select(fromHash); document.getElementById("projects").scrollIntoView(); }
   })();
 </script>
 </body>
