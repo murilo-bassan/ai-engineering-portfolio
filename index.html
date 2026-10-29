@@ -3,24 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Murilo Bassan — AI Engineering</title>
-  <meta name="description" content="Production AI systems: governed MCP tools, durable agents, evidence-bound pipelines, hybrid RAG and honest evaluation.">
+  <title>Murilo Bassan</title>
+  <meta name="description" content="Murilo Bassan, AI researcher at LIA (UFMS). Projects with AI agents, Python, LangGraph and FastAPI.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23000'/%3E%3Crect x='2' y='2' width='5' height='5' fill='%23c6ff00'/%3E%3Crect x='9' y='2' width='5' height='5' fill='%23a58bff'/%3E%3Crect x='2' y='9' width='5' height='5' fill='%232a2a2a'/%3E%3Crect x='9' y='9' width='5' height='5' fill='%23c6ff00'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='4' fill='%23000'/%3E%3Ccircle cx='8' cy='8' r='4' fill='%23c6ff00'/%3E%3C/svg%3E">
 </head>
 <body>
 <nav>
   <div class="wrap">
-    <a class="brand" href="#top"><span class="mark"><i></i><i></i><i></i><i></i></span> murilo bassan</a>
+    <a class="brand" href="#top">Murilo Bassan</a>
     <div class="links">
-      <a href="#projects">projects</a>
-      <a class="hide-sm" href="#map">architecture</a>
-      <a class="hide-sm" href="#skills">skills</a>
-      <a href="https://github.com/murilo-bassan" target="_blank" rel="noreferrer">github ↗</a>
-      <span class="lang" role="group" aria-label="language">
+      <a href="#projects"><span data-lang-en>Projects</span><span data-lang-pt>Projetos</span></a>
+      <a href="#about"><span data-lang-en>About</span><span data-lang-pt>Sobre</span></a>
+      <span class="lang" role="group" aria-label="Language">
         <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
         <button type="button" data-set-lang="pt-BR" aria-pressed="false">PT</button>
       </span>
@@ -30,295 +28,184 @@
 
 <header class="hero" id="top">
   <div class="wrap">
-    <div class="label">AI engineer · AI builder</div>
-    <h1 data-lang-en>I build the parts of AI systems that <span class="accent">have to work on Monday.</span></h1>
-    <h1 data-lang-pt>Eu construo a parte dos sistemas de IA que <span class="accent">precisa funcionar na segunda-feira.</span></h1>
-    <p class="lead" data-lang-en>Governance for tools, agents that survive crashes, pipelines where every model claim is checked
-      against evidence, retrieval that is measured instead of eyeballed, and evaluations that tell the truth.
-      Five repositories, one engineering standard.</p>
-    <p class="lead" data-lang-pt>Governança de tools, agentes que sobrevivem a falhas, pipelines em que cada afirmação do modelo é
-      checada contra evidência, retrieval medido em vez de "parece bom" e avaliações que dizem a verdade.
-      Cinco repositórios, um mesmo padrão de engenharia.</p>
-    <div class="cta">
-      <a class="btn primary" href="#projects"><span data-lang-en>See the projects ↓</span><span data-lang-pt>Ver os projetos ↓</span></a>
-      <a class="btn" href="https://github.com/murilo-bassan" target="_blank" rel="noreferrer">github.com/murilo-bassan</a>
-    </div>
-    <div class="stats">
-      <div class="stat"><span class="label" data-lang-en>repositories</span><span class="label" data-lang-pt>repositórios</span><b>5</b></div>
-      <div class="stat"><span class="label" data-lang-en>automated tests</span><span class="label" data-lang-pt>testes automatizados</span><b>210+</b></div>
-      <div class="stat"><span class="label" data-lang-en>duplicates after a crash</span><span class="label" data-lang-pt>duplicados após queda</span><b class="accent">0</b></div>
-      <div class="stat"><span class="label" data-lang-en>architecture decisions</span><span class="label" data-lang-pt>decisões de arquitetura</span><b>17 ADRs</b></div>
+    <h1>Murilo<br>Bassan</h1>
+    <div class="intro">
+      <p data-lang-en>I'm an AI researcher at LIA (UFMS) in Campo Grande, Brazil. I build AI agents and the software around them with Python, LangGraph and FastAPI.</p>
+      <p data-lang-pt>Sou pesquisador de IA no LIA (UFMS), em Campo Grande. Construo agentes de IA e o software em volta deles com Python, LangGraph e FastAPI.</p>
+      <p class="soft" data-lang-en>These five projects cover what it takes to use AI in real work: controlling access, surviving failures, checking answers and keeping costs down.</p>
+      <p class="soft" data-lang-pt>Estes cinco projetos tratam do que é preciso para usar IA no trabalho de verdade: controlar acesso, aguentar falhas, conferir respostas e segurar o custo.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects"><span data-lang-en>See projects</span><span data-lang-pt>Ver projetos</span></a>
+        <a class="btn" href="https://github.com/murilo-bassan" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/murilo-bassan-3909a2261/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
     </div>
   </div>
 </header>
 
-<section class="block" id="projects">
+<main id="projects">
+  <article class="project">
+    <div class="wrap grid">
+      <div class="text">
+        <h2>toolgate</h2>
+        <p class="what" data-lang-en>A control panel for the tools an AI assistant can use. You decide who can use each tool, passwords stay encrypted, and every call is logged so you can check later who did what.</p>
+        <p class="what" data-lang-pt>Um painel de controle para as ferramentas que um assistente de IA pode usar. Você decide quem usa cada ferramenta, as senhas ficam criptografadas e toda chamada fica registrada para conferir depois quem fez o quê.</p>
+        <ul data-lang-en>
+          <li>Chat with the tools in plain language; conversations are saved</li>
+          <li>A new tool only goes live after another person approves it</li>
+          <li>The log notices if anyone edits an old record</li>
+          <li>Works with Claude Desktop and any MCP client</li>
+        </ul>
+        <ul data-lang-pt>
+          <li>Converse com as ferramentas em linguagem natural; as conversas ficam salvas</li>
+          <li>Ferramenta nova só entra no ar depois que outra pessoa aprova</li>
+          <li>O registro percebe se alguém mexer num evento antigo</li>
+          <li>Funciona com o Claude Desktop e qualquer cliente MCP</li>
+        </ul>
+        <p class="stack">Python, FastAPI, MCP, SQLite, Docker</p>
+        <a class="code" href="https://github.com/murilo-bassan/mcp-tool-gateway" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+      </div>
+      <a class="shot" href="assets/gateway.png" target="_blank" rel="noreferrer"><img src="assets/gateway.png" alt="toolgate dashboard" loading="lazy"></a>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="wrap grid">
+      <div class="text">
+        <h2>runloop</h2>
+        <p class="what" data-lang-en>Runs AI agents on long tasks without losing work. If the server goes down halfway, the agent continues where it stopped and nothing is done twice.</p>
+        <p class="what" data-lang-pt>Roda agentes de IA em tarefas longas sem perder trabalho. Se o servidor cair no meio, o agente continua de onde parou e nada é feito duas vezes.</p>
+        <ul data-lang-en>
+          <li>Asks a person before actions like placing an order</li>
+          <li>Token limit per user, so costs can't run away</li>
+          <li>Shows each step of the agent live</li>
+          <li>Tested by killing a worker mid-run: 24 of 24 tasks finished, no duplicate orders</li>
+        </ul>
+        <ul data-lang-pt>
+          <li>Pede aprovação de uma pessoa antes de ações como fazer um pedido</li>
+          <li>Limite de tokens por usuário, para o custo não sair do controle</li>
+          <li>Mostra cada passo do agente ao vivo</li>
+          <li>Testado derrubando um worker no meio: 24 de 24 tarefas concluídas, nenhum pedido duplicado</li>
+        </ul>
+        <p class="stack">Python, PostgreSQL, FastAPI, Docker</p>
+        <a class="code" href="https://github.com/murilo-bassan/durable-agent-runtime" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+      </div>
+      <a class="shot" href="assets/runtime.png" target="_blank" rel="noreferrer"><img src="assets/runtime.png" alt="runloop console" loading="lazy"></a>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="wrap grid">
+      <div class="text">
+        <h2>processlens</h2>
+        <p class="what" data-lang-en>Reads a business process (a BPMN diagram plus its written description) and suggests what could be automated. Each suggestion points to the part of the document that backs it up.</p>
+        <p class="what" data-lang-pt>Lê um processo de negócio (o diagrama BPMN e a descrição escrita) e sugere o que dá para automatizar. Cada sugestão aponta o trecho do documento que a justifica.</p>
+        <ul data-lang-en>
+          <li>Suggestions with no source in the documents are thrown out</li>
+          <li>Scores come from a fixed checklist, so the same answers always give the same score</li>
+          <li>Exports the report to Word, HTML or JSON</li>
+          <li>Built as a LangGraph pipeline, one step per job</li>
+        </ul>
+        <ul data-lang-pt>
+          <li>Sugestão sem fonte nos documentos é descartada</li>
+          <li>A nota vem de um checklist fixo: mesmas respostas, mesma nota</li>
+          <li>Exporta o relatório em Word, HTML ou JSON</li>
+          <li>Feito como um pipeline LangGraph, uma etapa para cada tarefa</li>
+        </ul>
+        <p class="stack">Python, LangGraph, Pydantic, FastAPI</p>
+        <a class="code" href="https://github.com/murilo-bassan/process-automation-agents" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+      </div>
+      <a class="shot" href="assets/processlens.png" target="_blank" rel="noreferrer"><img src="assets/processlens.png" alt="processlens report" loading="lazy"></a>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="wrap grid">
+      <div class="text">
+        <h2>priceintel</h2>
+        <p class="what" data-lang-en>Answers "how much did the government pay for this?" by searching purchase records. It skips items that only look similar, turns boxes and packs into unit prices, and drops values typed in wrong.</p>
+        <p class="what" data-lang-pt>Responde "quanto o governo pagou por isto?" buscando em registros de compras. Ignora itens só parecidos, converte caixas e pacotes em preço por unidade e descarta valores digitados errado.</p>
+        <ul data-lang-en>
+          <li>Searching "computer" no longer returns computer desks</li>
+          <li>Every number in the answer links to the purchases behind it</li>
+          <li>Turn each step off and watch the estimate get worse</li>
+          <li>Worst error went from 968% to 14% on the test set</li>
+        </ul>
+        <ul data-lang-pt>
+          <li>Buscar "computador" não traz mais mesa para computador</li>
+          <li>Cada número da resposta leva às compras de onde saiu</li>
+          <li>Desligue cada etapa e veja a estimativa piorar</li>
+          <li>O pior erro caiu de 968% para 14% no conjunto de teste</li>
+        </ul>
+        <p class="stack">Python, Next.js, TypeScript, pgvector</p>
+        <a class="code" href="https://github.com/murilo-bassan/hybrid-rag-price-intel" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+      </div>
+      <a class="shot" href="assets/priceintel.png" target="_blank" rel="noreferrer"><img src="assets/priceintel.png" alt="priceintel search" loading="lazy"></a>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="wrap grid">
+      <div class="text">
+        <h2>routebench</h2>
+        <p class="what" data-lang-en>Compares ways to decide which tool should handle a request, from a simple keyword list to an LLM, and shows which one is worth what it costs.</p>
+        <p class="what" data-lang-pt>Compara formas de decidir qual ferramenta deve atender um pedido, de uma lista de palavras-chave até um LLM, e mostra qual vale o que custa.</p>
+        <ul data-lang-en>
+          <li>Counts how often each method acts on requests it should refuse</li>
+          <li>Tells you when a difference is just noise</li>
+          <li>Uses the expensive method only when the cheap one isn't sure</li>
+          <li>Generates an HTML report you can open in any browser</li>
+        </ul>
+        <ul data-lang-pt>
+          <li>Conta quantas vezes cada método age num pedido que deveria recusar</li>
+          <li>Avisa quando uma diferença é só ruído</li>
+          <li>Usa o método caro só quando o barato não tem certeza</li>
+          <li>Gera um relatório HTML que abre em qualquer navegador</li>
+        </ul>
+        <p class="stack">Python, NumPy, estatística</p>
+        <a class="code" href="https://github.com/murilo-bassan/llm-routing-eval-lab" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+      </div>
+      <a class="shot" href="assets/routebench.png" target="_blank" rel="noreferrer"><img src="assets/routebench.png" alt="routebench report" loading="lazy"></a>
+    </div>
+  </article>
+</main>
+
+<section class="about" id="about">
   <div class="wrap">
-    <div class="head">
-      <div>
-        <div class="label">projects</div>
-        <h2 data-lang-en>Each one answers a question production asks.</h2>
-        <h2 data-lang-pt>Cada um responde a uma pergunta que a produção faz.</h2>
-      </div>
-      <p data-lang-en>Model-agnostic by design: every project talks to any OpenAI-compatible provider (OpenAI, OpenRouter, vLLM, Ollama), and a deterministic reference engine behind the same interface keeps tests and CI exact.</p>
-      <p data-lang-pt>Agnóstico de modelo por design: todo projeto fala com qualquer provedor compatível com OpenAI (OpenAI, OpenRouter, vLLM, Ollama), e um motor de referência determinístico atrás da mesma interface mantém testes e CI exatos.</p>
-    </div>
-
-    <article class="project">
-      <div>
-        <div class="num">01 · governance</div>
-        <h3>toolgate</h3>
-        <a class="repo" href="https://github.com/murilo-bassan/mcp-tool-gateway" target="_blank" rel="noreferrer">mcp-tool-gateway ↗</a>
-        <p class="pitch" data-lang-en><b>Who may call which tool, with which data — and can you prove it?</b> One MCP server in front of every tool domain, where the stdio client, the web panel and backend services all pass through the same executor.</p>
-        <p class="pitch" data-lang-pt><b>Quem pode chamar qual tool, com quais dados — e dá para provar?</b> Um servidor MCP na frente de todos os domínios, em que cliente stdio, painel web e serviços passam pelo mesmo executor.</p>
-        <ul data-lang-en>
-          <li>Tools as data: JSON Schemas served live; an approved tool appears without restart</li>
-          <li>Per-tool RBAC by glob; clients only <i>see</i> what they can call</li>
-          <li>Dynamic HTTP tools with SSRF guards, secret references and four-eyes approval</li>
-          <li>SHA-256 hash-chained audit trail over PII-masked events</li>
-        </ul>
-        <ul data-lang-pt>
-          <li>Tools como dados: JSON Schemas servidos ao vivo; tool aprovada aparece sem reiniciar</li>
-          <li>Permissão por tool via globs; o cliente só <i>vê</i> o que pode chamar</li>
-          <li>Tools HTTP dinâmicas com proteção a SSRF, secrets por referência e aprovação a quatro olhos</li>
-          <li>Trilha de auditoria com cadeia de hashes SHA-256 sobre eventos mascarados</li>
-        </ul>
-        <div class="chips"><span class="chip">MCP 2.2</span><span class="chip">FastAPI</span><span class="chip">JSON Schema</span><span class="chip">Fernet</span><span class="chip">SQLite WAL</span><span class="chip">Docker</span></div>
-      </div>
-      <div class="shot"><div class="bar"><i></i><i></i><i></i></div><a href="assets/gateway.png" target="_blank" rel="noreferrer" title="open full size"><img src="assets/gateway.png" alt="toolgate overview" loading="lazy"></a></div>
-    </article>
-
-    <article class="project">
-      <div>
-        <div class="num">02 · reliability</div>
-        <h3>runloop</h3>
-        <a class="repo" href="https://github.com/murilo-bassan/durable-agent-runtime" target="_blank" rel="noreferrer">durable-agent-runtime ↗</a>
-        <p class="pitch" data-lang-en><b>What happens when the worker dies mid-run, the user clicks twice, and the budget runs out?</b> Nothing bad — a Postgres-backed agent runtime built to be interrupted.</p>
-        <p class="pitch" data-lang-pt><b>E se o worker morrer no meio, o usuário clicar duas vezes e o orçamento acabar?</b> Nada de ruim — um runtime de agentes sobre Postgres feito para ser interrompido.</p>
-        <div class="metric"><b>24/24</b><span class="mono" data-lang-en>runs finished after SIGKILL · 0 duplicate orders</span><span class="mono" data-lang-pt>runs concluídos após SIGKILL · 0 pedidos duplicados</span></div>
-        <ul data-lang-en>
-          <li>Queue on <code>FOR UPDATE SKIP LOCKED</code>, heartbeats, stale-run recovery, poison-run cap</li>
-          <li>Resumes from the persisted transcript; write tools exactly-once</li>
-          <li>Token budgets with reserve/settle under row locks; Idempotency-Key</li>
-          <li>Human approvals bound to a hash of the exact arguments</li>
-        </ul>
-        <ul data-lang-pt>
-          <li>Fila com <code>FOR UPDATE SKIP LOCKED</code>, heartbeat, recuperação e limite de tentativas</li>
-          <li>Retoma do transcript salvo; tools de escrita executam uma única vez</li>
-          <li>Orçamento de tokens com reserva/liquidação sob lock; Idempotency-Key</li>
-          <li>Aprovação humana presa ao hash dos argumentos exatos</li>
-        </ul>
-        <div class="chips"><span class="chip">PostgreSQL 16</span><span class="chip">psycopg 3</span><span class="chip">FastAPI · SSE</span><span class="chip">chaos test</span><span class="chip">OpenAI-compatible</span></div>
-      </div>
-      <div class="shot"><div class="bar"><i></i><i></i><i></i></div><a href="assets/runtime.png" target="_blank" rel="noreferrer" title="open full size"><img src="assets/runtime.png" alt="runloop console" loading="lazy"></a></div>
-    </article>
-
-    <article class="project">
-      <div>
-        <div class="num">03 · agents with evidence</div>
-        <h3>processlens</h3>
-        <a class="repo" href="https://github.com/murilo-bassan/process-automation-agents" target="_blank" rel="noreferrer">process-automation-agents ↗</a>
-        <p class="pitch" data-lang-en><b>What should we automate in this process — and where does it say so?</b> A LangGraph pipeline over BPMN + documents where models propose and code decides.</p>
-        <p class="pitch" data-lang-pt><b>O que automatizar neste processo — e onde isso está escrito?</b> Um pipeline LangGraph sobre BPMN + documentos em que o modelo propõe e o código decide.</p>
-        <ul data-lang-en>
-          <li>Every claim must cite a BPMN element or sentence that exists, with a quote that matches</li>
-          <li>Scores from a published rubric over cited answers — never a model's "8/10"</li>
-          <li>Structured output with schema validation and bounded self-repair; one model per stage</li>
-          <li>Independent auditor; reports in JSON, Markdown, HTML and DOCX</li>
-        </ul>
-        <ul data-lang-pt>
-          <li>Toda afirmação cita um elemento do BPMN ou sentença que existe, com citação que confere</li>
-          <li>Nota por rubrica publicada sobre respostas citadas — nunca um "8/10" do modelo</li>
-          <li>Saída estruturada com validação e autocorreção limitada; um modelo por estágio</li>
-          <li>Auditor independente; relatórios em JSON, Markdown, HTML e DOCX</li>
-        </ul>
-        <div class="chips"><span class="chip">LangGraph</span><span class="chip">Pydantic</span><span class="chip">BPMN 2.0</span><span class="chip">pypdf</span><span class="chip">python-docx</span></div>
-      </div>
-      <div class="shot"><div class="bar"><i></i><i></i><i></i></div><a href="assets/processlens.png" target="_blank" rel="noreferrer" title="open full size"><img src="assets/processlens.png" alt="processlens assessment" loading="lazy"></a></div>
-    </article>
-
-    <article class="project">
-      <div>
-        <div class="num">04 · retrieval</div>
-        <h3>priceintel</h3>
-        <a class="repo" href="https://github.com/murilo-bassan/hybrid-rag-price-intel" target="_blank" rel="noreferrer">hybrid-rag-price-intel ↗</a>
-        <p class="pitch" data-lang-en><b>How much did the public sector pay for this?</b> Ask for "computador" and search returns <i>tables for computers</i>. Hybrid retrieval, an LLM judge and robust statistics fix that — measured on data with hidden ground truth.</p>
-        <p class="pitch" data-lang-pt><b>Quanto o setor público pagou por isto?</b> Busque "computador" e vêm <i>mesas para computador</i>. Busca híbrida, um juiz LLM e estatística robusta resolvem — medido contra gabarito oculto.</p>
-        <div class="metric"><b>968% → 14%</b><span class="mono" data-lang-en>worst-case price error, naive vs full pipeline</span><span class="mono" data-lang-pt>pior erro de preço, ingênuo vs pipeline completo</span></div>
-        <ul data-lang-en>
-          <li>BM25 + dense (pgvector HNSW) fused with RRF; adaptive depth when the judge rejects</li>
-          <li>Package → base-unit normalization; log-scale outlier fences</li>
-          <li>Grounded answers citing record ids; out-of-catalog refusal</li>
-          <li>Next.js 15 app with live ablation switches; CI quality gate</li>
-        </ul>
-        <ul data-lang-pt>
-          <li>BM25 + denso (pgvector HNSW) com fusão RRF; profundidade adaptativa</li>
-          <li>Normalização de embalagem para unidade; cercas de outlier em escala log</li>
-          <li>Resposta fundamentada com ids citados; recusa fora do catálogo</li>
-          <li>App Next.js 15 com ablação ao vivo; portão de qualidade no CI</li>
-        </ul>
-        <div class="chips"><span class="chip">pgvector</span><span class="chip">BM25</span><span class="chip">RRF</span><span class="chip">LLM-as-judge</span><span class="chip">Next.js 15</span><span class="chip">TypeScript</span></div>
-      </div>
-      <div class="shot"><div class="bar"><i></i><i></i><i></i></div><a href="assets/priceintel.png" target="_blank" rel="noreferrer" title="open full size"><img src="assets/priceintel.png" alt="priceintel with the judge switched off" loading="lazy"></a></div>
-    </article>
-
-    <article class="project">
-      <div>
-        <div class="num">05 · evaluation</div>
-        <h3>routebench</h3>
-        <a class="repo" href="https://github.com/murilo-bassan/llm-routing-eval-lab" target="_blank" rel="noreferrer">llm-routing-eval-lab ↗</a>
-        <p class="pitch" data-lang-en><b>Which router sends a request to the right tool — and is an LLM worth it?</b> A benchmark that reports what accuracy hides.</p>
-        <p class="pitch" data-lang-pt><b>Qual roteador manda o pedido para a tool certa — e o LLM compensa?</b> Um benchmark que mostra o que a acurácia esconde.</p>
-        <ul data-lang-en>
-          <li>Template-level split (no paraphrase leakage); out-of-scope false-accept rate</li>
-          <li>Macro-F1, bootstrap CIs, exact McNemar, ECE calibration, coverage curves</li>
-          <li>Cascades (cheap → expensive) with escalation rate and cost per 1k</li>
-          <li>LLM numbers measured and cached — never typed in; regression gate in CI</li>
-        </ul>
-        <ul data-lang-pt>
-          <li>Split por template (sem vazamento); taxa de falso aceite fora de escopo</li>
-          <li>Macro-F1, IC por bootstrap, McNemar exato, calibração ECE, curvas de cobertura</li>
-          <li>Cascatas (barato → caro) com taxa de escalonamento e custo por mil</li>
-          <li>Números de LLM medidos e em cache — nunca digitados; portão no CI</li>
-        </ul>
-        <div class="chips"><span class="chip">NumPy</span><span class="chip">statistics</span><span class="chip">calibration</span><span class="chip">JSON mode</span><span class="chip">CI gate</span></div>
-      </div>
-      <div class="shot"><div class="bar"><i></i><i></i><i></i></div><a href="assets/routebench.png" target="_blank" rel="noreferrer" title="open full size"><img src="assets/routebench.png" alt="routebench scorecard" loading="lazy"></a></div>
-    </article>
-  </div>
-</section>
-
-<section class="block" id="map">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <div class="label">architecture</div>
-        <h2 data-lang-en>Five repositories, one platform shape.</h2>
-        <h2 data-lang-pt>Cinco repositórios, o formato de uma plataforma.</h2>
-      </div>
-      <p data-lang-en>Each repo stands alone, but together they are the layers a company needs to put LLMs in front of real work.</p>
-      <p data-lang-pt>Cada repo funciona sozinho, mas juntos formam as camadas que uma empresa precisa para pôr LLMs em trabalho real.</p>
-    </div>
-    <div class="map">
-      <svg viewBox="0 0 1100 340" role="img" aria-label="how the five systems fit together" font-family="JetBrains Mono, monospace">
-        <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4a4a48"/></marker></defs>
-        <g font-size="12" fill="#c9c9c4">
-          <rect x="20" y="140" width="150" height="60" rx="3" fill="#0b0b0b" stroke="#2a2a2a"/>
-          <text x="95" y="166" text-anchor="middle">users · LLM clients</text><text x="95" y="184" text-anchor="middle" fill="#7a7a76" font-size="10.5">MCP · HTTP</text>
-
-          <rect x="240" y="40" width="200" height="66" rx="3" fill="#0b0b0b" stroke="#a58bff"/>
-          <text x="340" y="66" text-anchor="middle" fill="#a58bff">05 routebench</text><text x="340" y="86" text-anchor="middle" fill="#7a7a76" font-size="10.5">which router? measured</text>
-
-          <rect x="240" y="137" width="200" height="66" rx="3" fill="#0b0b0b" stroke="#c6ff00"/>
-          <text x="340" y="163" text-anchor="middle" fill="#c6ff00">01 toolgate</text><text x="340" y="183" text-anchor="middle" fill="#7a7a76" font-size="10.5">RBAC · secrets · audit</text>
-
-          <rect x="520" y="137" width="200" height="66" rx="3" fill="#0b0b0b" stroke="#c6ff00"/>
-          <text x="620" y="163" text-anchor="middle" fill="#c6ff00">02 runloop</text><text x="620" y="183" text-anchor="middle" fill="#7a7a76" font-size="10.5">durable runs · approvals</text>
-
-          <rect x="800" y="70" width="270" height="66" rx="3" fill="#0b0b0b" stroke="#2a2a2a"/>
-          <text x="935" y="96" text-anchor="middle">03 processlens</text><text x="935" y="116" text-anchor="middle" fill="#7a7a76" font-size="10.5">evidence-bound analysis</text>
-
-          <rect x="800" y="204" width="270" height="66" rx="3" fill="#0b0b0b" stroke="#2a2a2a"/>
-          <text x="935" y="230" text-anchor="middle">04 priceintel</text><text x="935" y="250" text-anchor="middle" fill="#7a7a76" font-size="10.5">hybrid RAG · judge · stats</text>
-        </g>
-        <g stroke="#4a4a48" stroke-width="1.3" fill="none" marker-end="url(#arr)">
-          <path d="M170 170 H236"/><path d="M340 106 V133"/><path d="M440 170 H516"/>
-          <path d="M720 160 C760 150, 760 103, 796 103"/><path d="M720 180 C760 190, 760 237, 796 237"/>
-        </g>
-        <g font-size="10.5" fill="#7a7a76">
-          <text x="350" y="124">routes</text><text x="452" y="160">tool calls</text><text x="735" y="128">agent tools</text><text x="735" y="226">agent tools</text>
-          <text x="20" y="310" fill="#4a4a48">every arrow: one executor · one audit trail · any OpenAI-compatible model · CI-reproducible</text>
-        </g>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<section class="block" id="skills">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <div class="label">skills, with proof</div>
-        <h2 data-lang-en>Where each skill is demonstrated.</h2>
-        <h2 data-lang-pt>Onde cada habilidade é demonstrada.</h2>
-      </div>
-    </div>
-    <div class="scroll">
-      <table>
-        <thead><tr><th>skill</th><th class="c">01 gateway</th><th class="c">02 runtime</th><th class="c">03 processlens</th><th class="c">04 priceintel</th><th class="c">05 routebench</th></tr></thead>
-        <tbody>
-          <tr><td>MCP servers & tool design</td><td class="y">●</td><td class="n">·</td><td class="n">·</td><td class="n">·</td><td class="y">●</td></tr>
-          <tr><td>Agent loops, tool calling, human-in-the-loop</td><td class="n">·</td><td class="y">●</td><td class="y">●</td><td class="n">·</td><td class="n">·</td></tr>
-          <tr><td>Multi-agent orchestration (LangGraph)</td><td class="n">·</td><td class="n">·</td><td class="y">●</td><td class="n">·</td><td class="n">·</td></tr>
-          <tr><td>RAG: BM25, embeddings, pgvector, RRF</td><td class="n">·</td><td class="n">·</td><td class="n">·</td><td class="y">●</td><td class="n">·</td></tr>
-          <tr><td>LLM-as-judge, structured output, self-repair</td><td class="n">·</td><td class="n">·</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
-          <tr><td>Hallucination containment / grounding</td><td class="n">·</td><td class="n">·</td><td class="y">●</td><td class="y">●</td><td class="n">·</td></tr>
-          <tr><td>Evaluation: IR metrics, calibration, significance</td><td class="n">·</td><td class="n">·</td><td class="n">·</td><td class="y">●</td><td class="y">●</td></tr>
-          <tr><td>Cost control: budgets, cascades, caching</td><td class="n">·</td><td class="y">●</td><td class="y">●</td><td class="n">·</td><td class="y">●</td></tr>
-          <tr><td>Security: RBAC, secrets, SSRF, CSRF, PII masking</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="n">·</td><td class="n">·</td></tr>
-          <tr><td>Reliability: queues, idempotency, exactly-once effects</td><td class="n">·</td><td class="y">●</td><td class="n">·</td><td class="n">·</td><td class="n">·</td></tr>
-          <tr><td>Postgres, SQL, migrations</td><td class="y">●</td><td class="y">●</td><td class="n">·</td><td class="y">●</td><td class="n">·</td></tr>
-          <tr><td>APIs (FastAPI, SSE), Next.js / TypeScript</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="n">·</td></tr>
-          <tr><td>Docker, CI quality gates, ADRs</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<section class="block">
-  <div class="wrap">
-    <div class="head"><div><div class="label">principles</div>
-      <h2 data-lang-en>How I build.</h2><h2 data-lang-pt>Como eu construo.</h2></div></div>
-    <div class="principles">
-      <div class="principle"><span class="label">01</span>
-        <h4 data-lang-en>Models propose, code decides</h4><h4 data-lang-pt>O modelo propõe, o código decide</h4>
-        <p data-lang-en>Evidence checks, scores and permissions are deterministic. Models do what they are good at.</p>
-        <p data-lang-pt>Checagem de evidência, notas e permissões são determinísticas. O modelo faz o que faz bem.</p></div>
-      <div class="principle"><span class="label">02</span>
-        <h4 data-lang-en>Measure, don't eyeball</h4><h4 data-lang-pt>Medir, não "achar"</h4>
-        <p data-lang-en>Ground truth, ablations, confidence intervals and CI gates — including when the result is unflattering.</p>
-        <p data-lang-pt>Gabarito, ablações, intervalos de confiança e portões no CI — inclusive quando o resultado não favorece.</p></div>
-      <div class="principle"><span class="label">03</span>
-        <h4 data-lang-en>Design for the crash</h4><h4 data-lang-pt>Projetar para a falha</h4>
-        <p data-lang-en>At-least-once with idempotent effects, ownership checks on every write, graceful degradation.</p>
-        <p data-lang-pt>Pelo menos uma vez com efeitos idempotentes, checagem de dono em toda escrita, degradação segura.</p></div>
-      <div class="principle"><span class="label">04</span>
-        <h4 data-lang-en>One door, one trail</h4><h4 data-lang-pt>Uma porta, uma trilha</h4>
-        <p data-lang-en>Every call through the same executor; every action in a tamper-evident log.</p>
-        <p data-lang-pt>Toda chamada pelo mesmo executor; toda ação numa trilha à prova de adulteração.</p></div>
-      <div class="principle"><span class="label">05</span>
-        <h4 data-lang-en>Reproducible by default</h4><h4 data-lang-pt>Reproduzível por padrão</h4>
-        <p data-lang-en>Synthetic data from fixed seeds and a deterministic reference engine behind every model call, so CI results are exact.</p>
-        <p data-lang-pt>Dados sintéticos com semente fixa e um motor de referência determinístico atrás de cada chamada de modelo, então os resultados do CI são exatos.</p></div>
-      <div class="principle"><span class="label">06</span>
-        <h4 data-lang-en>Decisions are written down</h4><h4 data-lang-pt>Decisões ficam escritas</h4>
-        <p data-lang-en>ADRs explain the trade-off, including what was left out of scope and why.</p>
-        <p data-lang-pt>ADRs explicam o trade-off, inclusive o que ficou fora do escopo e por quê.</p></div>
+    <h2 data-lang-en>About these projects</h2>
+    <h2 data-lang-pt>Sobre os projetos</h2>
+    <div class="cols">
+      <p data-lang-en>Each one has automated tests, runs with Docker and ships with sample data, so you can try it on your own machine in a few minutes.</p>
+      <p data-lang-pt>Todos têm testes automatizados, rodam com Docker e vêm com dados de exemplo, então dá para testar no seu computador em poucos minutos.</p>
+      <p data-lang-en>They work with any OpenAI-compatible model (OpenAI, OpenRouter, Ollama and others). All data is made up, so there's nothing private in them.</p>
+      <p data-lang-pt>Funcionam com qualquer modelo compatível com a API da OpenAI (OpenAI, OpenRouter, Ollama e outros). Os dados são todos fictícios, então não há nada privado.</p>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span class="mono">© 2026 Murilo Bassan · <span data-lang-en>all data in these projects is synthetic</span><span data-lang-pt>todos os dados destes projetos são sintéticos</span></span>
-    <a class="mono" href="https://github.com/murilo-bassan" target="_blank" rel="noreferrer">github.com/murilo-bassan ↗</a>
+    <span>© 2026 Murilo Bassan</span>
+    <span class="contact">
+      <a href="https://github.com/murilo-bassan" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/murilo-bassan-3909a2261/" target="_blank" rel="noreferrer">LinkedIn</a>
+    </span>
   </div>
 </footer>
 
 <script>
-  // Language toggle: EN by default, PT for pt-* browsers, remembered per visitor.
+  // EN by default, PT for Portuguese browsers; the choice is remembered.
   (function () {
-    const root = document.documentElement;
     const buttons = document.querySelectorAll("[data-set-lang]");
     function set(lang) {
-      root.lang = lang;
+      document.documentElement.lang = lang;
       buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.setLang === lang)));
       try { localStorage.setItem("lang", lang); } catch (e) {}
     }
     let saved = null;
     try { saved = localStorage.getItem("lang"); } catch (e) {}
-    set(saved || (navigator.language || "").toLowerCase().startsWith("pt") ? (saved || "pt-BR") : "en");
+    const browserPt = (navigator.language || "").toLowerCase().startsWith("pt");
+    set(saved || (browserPt ? "pt-BR" : "en"));
     buttons.forEach((b) => b.addEventListener("click", () => set(b.dataset.setLang)));
   })();
 </script>
