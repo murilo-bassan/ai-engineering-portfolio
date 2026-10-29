@@ -58,8 +58,9 @@ nav .wrap { display: flex; align-items: center; justify-content: space-between; 
 .panel { border: 1px solid var(--line); border-radius: 20px; background: var(--raised); overflow: hidden; animation: show .35s ease; }
 .panel:focus-visible { outline-offset: 4px; }
 @keyframes show { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-.shot { display: block; border-top: 1px solid var(--line); cursor: zoom-in; background: #000; }
-.shot img { width: 100%; }
+.shot { display: block; border-top: 1px solid var(--line); background: #000; }
+a.shot { cursor: zoom-in; }
+.shot img, .shot video { width: 100%; display: block; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
 .body { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; padding: 32px; }
 .panel h3 { font-weight: 600; font-size: 30px; letter-spacing: -.03em; margin: 0 0 14px; }
 .panel p.what { margin: 0 0 22px; font-size: 17px; }
@@ -69,6 +70,9 @@ nav .wrap { display: flex; align-items: center; justify-content: space-between; 
 .stack { color: var(--muted); font-size: 14.5px; margin: 0 0 22px; }
 .code { display: inline-flex; align-items: center; height: 42px; padding: 0 18px; border-radius: 999px; background: var(--ink); color: #000; font-weight: 500; font-size: 15px; text-decoration: none; }
 .code:hover { background: var(--lime); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.demo { display: inline-flex; align-items: center; height: 42px; padding: 0 18px; border-radius: 999px; border: 1px solid #333; font-weight: 500; font-size: 15px; text-decoration: none; }
+.demo:hover { border-color: var(--ink); }
 
 /* about */
 .about { padding: 96px 0; border-top: 1px solid var(--line); }

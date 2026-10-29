@@ -95,7 +95,7 @@
           <a class="code" href="https://github.com/murilo-bassan/mcp-tool-gateway" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
         </div>
       </div>
-      <a class="shot" href="assets/gateway.png" target="_blank" rel="noreferrer"><img src="assets/gateway.png" alt="toolgate dashboard" loading="lazy"></a>
+      <div class="shot"><video data-demo="gateway" poster="assets/gateway.png" muted loop playsinline preload="none" aria-label="toolgate demo"></video></div>
     </section>
     <section class="panel" role="tabpanel" id="p-runloop" aria-labelledby="t-runloop" tabindex="0" hidden>
       <div class="body">
@@ -121,7 +121,7 @@
           <a class="code" href="https://github.com/murilo-bassan/durable-agent-runtime" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
         </div>
       </div>
-      <a class="shot" href="assets/runtime.png" target="_blank" rel="noreferrer"><img src="assets/runtime.png" alt="runloop console" loading="lazy"></a>
+      <div class="shot"><video data-demo="runtime" poster="assets/runtime.png" muted loop playsinline preload="none" aria-label="runloop demo"></video></div>
     </section>
     <section class="panel" role="tabpanel" id="p-processlens" aria-labelledby="t-processlens" tabindex="0" hidden>
       <div class="body">
@@ -144,10 +144,11 @@
           <li>Feito como um pipeline LangGraph, uma etapa para cada tarefa</li>
           </ul>
           <p class="stack">Python, LangGraph, Pydantic, FastAPI</p>
-          <a class="code" href="https://github.com/murilo-bassan/process-automation-agents" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+          <div class="actions"><a class="code" href="https://github.com/murilo-bassan/process-automation-agents" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+          <a class="demo" href="demos/processlens-report.html" target="_blank" rel="noreferrer" data-lang-en>Open a sample report</a><a class="demo" href="demos/processlens-report.pt.html" target="_blank" rel="noreferrer" data-lang-pt>Abrir um relatório de exemplo</a></div>
         </div>
       </div>
-      <a class="shot" href="assets/processlens.png" target="_blank" rel="noreferrer"><img src="assets/processlens.png" alt="processlens report" loading="lazy"></a>
+      <div class="shot"><video data-demo="processlens" poster="assets/processlens.png" muted loop playsinline preload="none" aria-label="processlens demo"></video></div>
     </section>
     <section class="panel" role="tabpanel" id="p-priceintel" aria-labelledby="t-priceintel" tabindex="0" hidden>
       <div class="body">
@@ -173,7 +174,7 @@
           <a class="code" href="https://github.com/murilo-bassan/hybrid-rag-price-intel" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
         </div>
       </div>
-      <a class="shot" href="assets/priceintel.png" target="_blank" rel="noreferrer"><img src="assets/priceintel.png" alt="priceintel search" loading="lazy"></a>
+      <div class="shot"><video data-demo="priceintel" poster="assets/priceintel.png" muted loop playsinline preload="none" aria-label="priceintel demo"></video></div>
     </section>
     <section class="panel" role="tabpanel" id="p-routebench" aria-labelledby="t-routebench" tabindex="0" hidden>
       <div class="body">
@@ -196,7 +197,8 @@
           <li>Gera um relatório HTML que abre em qualquer navegador</li>
           </ul>
           <p class="stack">Python, NumPy, estatística</p>
-          <a class="code" href="https://github.com/murilo-bassan/llm-routing-eval-lab" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+          <div class="actions"><a class="code" href="https://github.com/murilo-bassan/llm-routing-eval-lab" target="_blank" rel="noreferrer"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+          <a class="demo" href="demos/routebench-report.html" target="_blank" rel="noreferrer" data-lang-en>Open the full report</a><a class="demo" href="demos/routebench-report.pt.html" target="_blank" rel="noreferrer" data-lang-pt>Abrir o relatório completo</a></div>
         </div>
       </div>
       <a class="shot" href="assets/routebench.png" target="_blank" rel="noreferrer"><img src="assets/routebench.png" alt="routebench report" loading="lazy"></a>
@@ -237,6 +239,7 @@
       document.documentElement.lang = lang;
       buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.setLang === lang)));
       try { localStorage.setItem("lang", lang); } catch (e) {}
+      document.dispatchEvent(new Event("langchange"));
     }
     let saved = null;
     try { saved = localStorage.getItem("lang"); } catch (e) {}
@@ -258,6 +261,7 @@
       if (focus) tab.focus();
       tab.scrollIntoView({ block: "nearest", inline: "nearest" });
       history.replaceState(null, "", "#" + tab.id.slice(2));
+      playVisible();
     }
     tabs.forEach((t, i) => {
       t.addEventListener("click", () => select(t));
@@ -268,8 +272,20 @@
         select(tabs[(i + step + tabs.length) % tabs.length], true);
       });
     });
+    // Demo videos: only the open project plays, in the page's language.
+    function playVisible() {
+      const lang = document.documentElement.lang === "pt-BR" ? "pt" : "en";
+      document.querySelectorAll("video[data-demo]").forEach((v) => {
+        if (v.closest("[role=tabpanel]").hidden) { v.pause(); return; }
+        const src = `demos/${v.dataset.demo}-${lang}.mp4`;
+        if (!v.src.endsWith(src)) { v.src = src; }
+        v.play().catch(() => {});
+      });
+    }
+    document.addEventListener("langchange", playVisible);
     const fromHash = document.getElementById("t-" + location.hash.slice(1));
     if (fromHash) { select(fromHash); document.getElementById("projects").scrollIntoView(); }
+    else playVisible();
   })();
 </script>
 </body>
